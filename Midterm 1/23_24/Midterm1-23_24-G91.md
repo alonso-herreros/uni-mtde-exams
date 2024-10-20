@@ -25,6 +25,35 @@ $$
 
 ### Pregunta 1.b) Determínese el estimador $\hat{S}_{\text{MAP}}$
 
+> **Respuesta**
+>
+> Lo haremos usando la definición
+>
+> $$
+> \hat{S}_{\text{MAP}} = \arg \max_s p_{S|X}(s|x)
+> $$
+>
+> Por suerte, ya obtuvimos la expresión de $p_{S|X}(s|x)$ en el apartado anterior. Solo debemos
+> maximizarla.
+>
+> $$
+> \begin{aligned}
+>     \frac{∂}{∂s} p_{S|X}(s|x) &= 0 \\
+>     \frac{∂}{∂s} 2 \exp(-s) &= 0 \\
+>     -2 \exp(-s) &= 0 \\
+>     \exp(-s) &= 0
+> \end{aligned}
+> $$
+>
+> Lo cual no significa que no exista respuesta, sino que no existen máximos ni mínimos. En este caso,
+> analizaremos el crecimiento de la función: ya que es decreciente en todo su dominio, el máximo se
+> encuentra en el valor más pequeño de $s$. Como $s$ está acotado a $0<s<x$, el valor que buscamos
+> es $s=0$.
+>
+> $$
+> \boxed{\hat{S}_{\text{MAP}} = 0}
+> $$
+
 ## Problema 2
 
 Se conoce la función de densidad de probabilidad de la variable aleatoria $X$ dada por:
