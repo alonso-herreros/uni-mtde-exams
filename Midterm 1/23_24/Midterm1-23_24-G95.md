@@ -9,15 +9,6 @@
 *Bachelor in Sound and Image Engineering*  
 *Bachelor in Telecommunication Technologies Engineering*  
 
-$$
-\global\def\E#1{\mathbb{E}\left\{#1\right\}}
-\global\def\MMSE#1{\hat{#1}_{\text{MMSE}}}
-\global\def\MAD#1{\hat{#1}_{\text{MAD}}}
-\global\def\MAP#1{\hat{#1}_{\text{MAP}}}
-\global\def\ML#1{\hat{#1}_{\text{ML}}}
-\global\def\LMSE#1{\hat{#1}_{\text{LMSE}}}
-$$
-
 ---
 
 ## Problem 1
@@ -29,7 +20,7 @@ p_{X|S}(x|s) = s x^{s-1}, \quad 0 ≤ x ≤ 1, \quad s ≥ 0
 $$
 
 ### Question 1.a)
-Find the ML estimate of $S$ given X, $\ML{S}$
+Find the ML estimate of $S$ given X, $\hat{S}_{\text{ML}}$
 
 > **Answer** ($✓$)
 >
@@ -37,7 +28,7 @@ Find the ML estimate of $S$ given X, $\ML{S}$
 >
 > $$\\
 > \begin{aligned}
->     \ML{S} &= \arg\max_{s} p_{X|S}(x|s) \\
+>     \hat{S}_{\text{ML}} &= \arg\max_{s} p_{X|S}(x|s) \\
 >     &= \arg\max_{s} s x^{s-1} \\
 >     &= \arg\max_{s} \ln(s x^{s-1}) \\
 >     &= \arg\max_{s} \ln(s) + (s-1) \ln(x) \\
@@ -57,7 +48,7 @@ Find the ML estimate of $S$ given X, $\ML{S}$
 > Plugging that back into the original equation
 >
 > $$\\
-> \boxed{\ML{S} = -\frac{1}{\ln(x)}}
+> \boxed{\hat{S}_{\text{ML}} = -\frac{1}{\ln(x)}}
 > $$
 
 ### Question 1.b)
@@ -81,7 +72,7 @@ observations of $X$.
 >
 > $$
 > \begin{aligned}
->     \ML{S} (\{x^{(k)}\}) &= \arg\max_s p_{\{X^{(k)}\}|S}(\{x^{(k)}\}|s) \\
+>     \hat{S}_{\text{ML}} (\{x^{(k)}\}) &= \arg\max_s p_{\{X^{(k)}\}|S}(\{x^{(k)}\}|s) \\
 >     &= \arg\max_s \ln \left(p_{\{X^{(k)}\}|S}(\{x^{(k)}\}|s)\right) \\
 >     &= \arg\max_s \ln ∏_{k=0}^{K-1} s \left(x^{(k)}\right)^{s-1} \\
 >     &= \arg\max_s ∑_{k=0}^{K-1} \left(\ln s + (s-1) \ln x^{(k)}\right) \\
@@ -118,7 +109,7 @@ p_{X,S}(x, s) = \begin{cases}
 $$
 
 ### Question 2.a)
-Determine the estimator $\MMSE{S}$.
+Determine the estimator $\hat{S}_{\text{MMSE}}$.
 
 > **Answer**  ($✓$)
 >
@@ -126,7 +117,7 @@ Determine the estimator $\MMSE{S}$.
 >
 > $$
 > \begin{aligned}
->     \MMSE{S} &= \arg\min_{\hat{S}} \E{(S - \hat{S})^2} \\
+>     \hat{S}_{\text{MMSE}} &= \arg\min_{\hat{S}} \mathbb E \{(S - \hat{S})^2\} \\
 >     &= \arg\min_{\hat{S}} ∫_{(S)} (s-\hat{S})^2 p_{S|X}(s|x) ds \\
 > \end{aligned}
 > $$
@@ -158,7 +149,7 @@ Determine the estimator $\MMSE{S}$.
 > And from here, we get that our MSE estimator is
 >
 > $$
-> \boxed{\MMSE{S} = \frac{2}{3}X}
+> \boxed{\hat{S}_{\text{MMSE}} = \frac{2}{3}X}
 > $$
 
 ### Question 2.b)
@@ -178,8 +169,8 @@ estimator.
 >
 > $$
 > \begin{aligned}
->     \hat{S} &= \arg\min_{\hat{s}} \E{c(S, \hat{S})} \\
->     \hat{S} &= \arg\min_{\hat{s}} \E{a^2 (S - \hat{S})^2} \\
+>     \hat{S} &= \arg\min_{\hat{s}} \mathbb E \{c(S, \hat{S})\} \\
+>     \hat{S} &= \arg\min_{\hat{s}} \mathbb E \{a^2 (S - \hat{S})^2\} \\
 >     \hat{S} &= \arg\min_{\hat{s}} ∫_{(S)} a^2 (s - \hat{S})^2 p_{S|X}(s|x) ds \\
 > \end{aligned}
 > $$
