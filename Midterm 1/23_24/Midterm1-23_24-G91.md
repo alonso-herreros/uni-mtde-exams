@@ -23,6 +23,73 @@ $$
 
 ### Pregunta 1.a) Determínese el estimador $\hat{S}_{\text{MAD}}$
 
+> **Respuesta**
+>
+> El estimador MAD debe coincidir con la mediana de la distribución de $S$ condicionada a $X$:
+>
+> $$
+> \begin{aligned}
+>     ∫_{-∞}^{\hat{S}_{\text{MAD}}} p_{S|X}(s|x) ds &= \frac{1}{2} \\
+> \end{aligned}
+> $$
+>
+> Para resolver esta expresión debemos obtener la probabilidad marginal a partir de la conjunta:
+>
+> $$
+> \begin{aligned}
+>     p_{S|X}(s|x) &= ∫_{(X)} p_{X,S}(x, s) dx \\
+>     &= ∫_0^∞ 2 \exp(-s - x) dx \\
+>     &= 2 ∫_0^∞ \exp(-s) \exp(-x) dx \\
+>     &= 2 \exp(-s) ∫_0^∞ \exp(-x) dx \\
+>     &= 2 \exp(-s) ⋅\left(-\exp(-x)\Big|_{x=0}^{x=∞}\right) \\
+>     &= 2 \exp(-s)
+> \end{aligned}
+> $$
+>
+> Con esto, podemos reemplazar en la expresión original.
+>
+> $$
+> \begin{aligned}
+>     ∫_{-∞}^{\hat{S}_{\text{MAD}}} p_{S|X}(s|x) ds &= \frac{1}{2} \\
+>     ∫_0^{\hat{S}_{\text{MAD}}} 2 \exp(-s) ds &= \frac{1}{2} \\
+>     - \exp(-s) \Big|_{s=0}^{\hat{S}_{\text{MAD}}} &= \frac{1}{4} \\
+>     \exp (-\hat{S}_{\text{MAD}}) - \exp(0) &= -\frac{1}{4} \\
+>     -\hat{S}_{\text{MAD}} &= \ln \left(-\frac{1}{4} + 1\right) \\
+> \end{aligned}
+> $$
+>
+> Menuda pérdida de tiempo. Probemos con la otra mitad de la integral
+>
+> $$
+> \begin{aligned}
+>     ∫_{\hat{S}_{\text{MAD}}}^∞ 2 \exp(-s) ds &= \frac{1}{2} \\
+>     ∫_{\hat{S}_{\text{MAD}}}^x \exp(-s) ds &= \frac{1}{4} \\
+>     -\exp(-s) \Big|_{s=\hat{S}_{\text{MAD}}}^{x} &= \frac{1}{4} \\
+>     \exp(-\hat{S}_{\text{MAD}}) - \exp(-x) &= \frac{1}{4} \\
+>     -\hat{S}_{\text{MAD}} &= \ln \left(\frac{1}{4} + \exp(-x)\right)
+> \end{aligned}
+> $$
+>
+> Esta podría ser la respuesta, de no ser por el hecho de que no lo es. Probemos otra vez
+>
+> $$
+> \begin{aligned}
+>
+>     ∫_{-∞}^{\hat{S}_{\text{MAD}}} p_{S|X}(s|x) ds &= ∫_{\hat{S}_{\text{MAD}}}^∞ p_{S|X}(s|x) ds \\
+>     ∫_0^{\hat{S}_{\text{MAD}}} 2 \exp(-s) ds &= ∫_{\hat{S}_{\text{MAD}}}^x 2 \exp(-s) ds \\
+>     -\exp(-s) \Big|_{s=0}^{\hat{S}_{\text{MAD}}} &= -\exp(-s) \Big|_{s=\hat{S}_{\text{MAD}}}^x \\
+>     \exp(-\hat{S}_{\text{MAD}}) - \exp(0) &= \exp(-x) - \exp(-\hat{S}_{\text{MAD}}) \\
+>     2 \exp(-\hat{S}_{\text{MAD}}) &= \exp(-x) + 1 \\
+>     \hat{S}_{\text{MAD}} &= \ln \left(\frac{\exp(-x) + 1}{2}\right)
+> \end{aligned}
+> $$
+>
+> Por fin, hemos llegado a la respuesta correcta:
+>
+> $$
+> \boxed{\hat{S}_{\text{MAD}} = \ln \left(\frac{1 + \exp(-x)}{2}\right)}
+> $$
+
 ### Pregunta 1.b) Determínese el estimador $\hat{S}_{\text{MAP}}$
 
 > **Respuesta**
