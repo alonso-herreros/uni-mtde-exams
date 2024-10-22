@@ -74,6 +74,64 @@ $\hat{S}_{\text{MMSE}}$.
 Obtenga el estimador lineal de menor error cuadrático medio de $S$ a la vista de
 $X$ ($\hat{S}_{LMSE}$):
 
+> **Respuesta**
+>
+> Ahora tenemos la restricción de linearidad
+>
+> $$
+> \hat{S}_{\text{LMSE}} = w_0 + w_1 X \\
+> $$
+>
+> Por suerte, este problema tiene una solución dada por la siguiente fórmula
+>
+> $$
+> \hat{S}_{\text{LMSE}} = \mathbb E\{S\}
+>     + \frac{\mathrm{Cov}(S,X)}{\mathrm{Var}\{X\}} (X - \mathbb E\{X\}) \\
+> $$
+>
+> Por lo que tendremos que hallar esos valores
+>
+> $$
+> \begin{aligned}
+>     \mathbb E\{S\} &= ∫_{(S)} s p_S(s) ds \\
+>     &= ∫_0^1 s ⋅ 2s \,ds \\
+>     &= 2 ⋅ \frac{1^3}{3} \\
+>     &= \frac{2}{3} \\[2em]
+>
+>     \mathbb E\{X\} &= ∫_{(X)} x p_X(x) dx \\
+>     &= ∫_0^1 x ⋅ \left(\frac{4}{3}x + \frac{1}{3}\right) dx \\
+>     &= \frac{4}{9} + \frac{1}{6} \\
+>     &= \frac{11}{18} \\[2em]
+>
+>     \mathrm{Var} \{X\} &= \mathbb E\{X^2\} - \mathbb E^2\{X\} \\
+>     &= ∫_{(X)} x^2 p_X(x) dx - \left(\frac{11}{18}\right)^2 \\
+>     &= ∫_0^1 x^2⋅\left(\frac{4}{3}x + \frac13\right) dx - \frac{11^2}{18^2} \\
+>     &= \frac{4}{3⋅4} + \frac{1}{3⋅3} - \frac{11^2}{18^2} \\
+>     &= 0.0710 \\[2em]
+>
+>     \mathrm{Cov} (X,S) &= \mathbb E\{X⋅S\} - \mathbb E\{X\} \mathbb E\{S\} \\
+>     &= ∫_{(X)} ∫_{(S)} xs ⋅ p_{X,S}(x,s)\,ds\,dx - \frac{11⋅2}{18⋅3} \\
+>     &= ∫_0^1 ∫_0^1 xs ⋅ 2s(2sx-s+1) \,ds\,dx - \frac{11}{27} \\
+>     &= ∫_0^1 ∫_0^1 (4s^3x^2 - 2s^3x +2s^2x) \,ds\,dx - \frac{11}{27} \\
+>     &= ∫_0^1 \left(\frac{4}{4}x^2 - \frac{2}{4}x + \frac{2}{3}x\right) dx
+>         - \frac{11}{27} \\
+>     &= \frac{1}{3} - \frac{2}{8} + \frac{2}{6} - \frac{11}{27} \\
+>     &= 9.260 ⋅10^{-3}
+> \end{aligned}
+> $$
+>
+> Finally, let's put all of those values into our formula for the estimator
+>
+> $$
+> \begin{aligned}
+>     \hat{S}_{\text{LMSE}} &= \mathbb E\{S\}
+>         + \frac{\mathrm{Cov}(S,X)}{\mathrm{Var}\{X\}} (X - \mathbb E\{X\}) \\
+>     &= \frac23 + \frac{9.260⋅10^{-3}}{0.0710} ⋅\left(X-\frac{11}{18}\right) \\
+>     &= \boxed{\frac{3}{23} ⋅X - \frac{27}{46}} \\
+>     &= \boxed{0.1304 ⋅X - 0.5870}
+> \end{aligned}
+> $$
+
 ## Problema 2
 
 Una variable aleatoria $X$ sigue una distribución de gamma inversa con
