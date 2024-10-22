@@ -171,3 +171,34 @@ $Y$, la siguiente expresión:
 $$
 p_Y(y) = \frac{a}{2} \exp\left(-\frac{ay}{2}\right), y ≥ 0
 $$
+
+> **Respuesta**
+>
+> El estimador de máxima verosimilitud se obtiene a partir de la siguiente definición:
+>
+> $$
+> \begin{aligned}
+>     \hat{A}_{ML} &= \arg\max_a ∏_{k=1}^K p_{\{Y^{(k)}\}|A} (y^{(k)} | a) \\
+>     \hat{A}_{ML} &= \arg\max_a \ln \left(∏_{k=1}^K p_{\{Y^{(k)}\}|A} (y^{(k)} | a)\right) \\
+>     &= \arg\max_a \ln \left(∏_{k=1}^K \frac{1}{a} \exp\left(-\frac{y^{(k)}}{a}\right)\right) \\
+>     &= \arg\max_a ∑_{k=1}^K \left( \ln a^{-1} + \ln \exp\left(-\frac{y^{(k)}}{a}\right) \right) \\
+>     &= \arg\max_a -K \ln a - \frac{1}{a} ∑_{k=1}^K y^{(k)}
+> \end{aligned}
+> $$
+>
+> Para minimizar, tomamos la derivada parcial
+>
+> $$
+> \begin{aligned}
+>     \frac{∂}{∂a} \left( -K \ln a - \frac{1}{a} ∑_{k=1}^K y^{(k)} \right) &= 0 \\
+>     -\frac{K}{a} + \frac{1}{a^2} ∑_{k=1}^K y^{(k)} &= 0 \\
+>     \frac{1}{a} ∑_{k=1}^K y^{(k)} &= K \\
+>     a &= \frac{1}{K} ∑_{k=1}^K y^{(k)}
+> \end{aligned}
+> $$
+>
+> Sustituyendo ese valor en la expresión anterior, obtenemos el estimador de máxima verosimilitud
+>
+> $$
+> \boxed{\hat{A}_{\text{ML}} = \frac{1}{K} ∑_{k=1}^K y^{(k)}}
+> $$
