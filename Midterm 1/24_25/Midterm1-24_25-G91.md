@@ -33,6 +33,43 @@ $$
 Obtenga el estimador de mínimo error cuadrático medio de $S$ a la vista de $X$,
 $\hat{S}_{\text{MMSE}}$.
 
+> **Respuesta**
+>
+> La siguiente fórmula nos ayudará con esta pregunta:
+>
+> $$
+> \begin{aligned}
+>     \hat{S}_{\text{MMSE}} &= \mathbb{E}[S|X] \\
+>     &= ∫_{(S)} s ⋅ p_{S|X}(s|x) \, ds \\
+> \end{aligned}
+> $$
+>
+> Esa distribución no la tenemos, pero la podemos averiguar:
+>
+> $$
+> \begin{aligned}
+>     p_{S|X}(s|x) &= \frac{p_{X,S}(x,s)}{p_X(x)} \\
+>     &= \frac{p_{X|S}(x|s) \cdot p_S(s)}{∫_{(S)}p_{X|S}(x|s)⋅p_S(s)ds} \\
+>     &= \frac{2s(2sx-s+1)}{∫_0^1 2s(2sx-s+1) ds} \\
+>     &= \frac{4s^2x - 2s^2 +2s}{∫_0^1 4s^2x - 2s^2 +2s ds} \\
+>     &= \frac{2s^2 (2x-1) +2s}{2⋅\frac{1^3}{3} (2x-1) + 2⋅\frac{1^2}{2}} \\
+>     &= \frac{2s^2 (2x-1) +2s}{\frac{4}{3}x + \frac{1}{3}}, \quad s, x ∈ [0, 1] \\
+> \end{aligned}
+> $$
+>
+> Asumamos que ese resultado es correcto.
+>
+> $$
+> \begin{aligned}
+>     \hat{S}_{\text{MMSE}} &= \mathbb{E}[S|X] \\
+>     &= ∫_{(S)} s ⋅ \frac{2s^2(2x-1) + 2s}{\frac{4}{3}x + \frac{1}{3}} \, ds \\
+>     &= \frac{3}{4x+1} ∫_0^1 2s^3(2x-1) + 2s^2 \, ds \\
+>     &= \frac{3}{4x+1} \left(\frac{2}{4} (2x-1) ⋅1^4 + \frac{2}{3} ⋅1^3\right) \\
+>     &= \frac{3x - \frac{3}{2} + 2}{4x + 1} \\
+>     &= \boxed{\frac{3x + \frac{1}{2}}{4x + 1}, \quad 0 ≤ x ≤ 1} \\
+> \end{aligned}
+> $$
+
 ### Pregunta 1.b)
 Obtenga el estimador lineal de menor error cuadrático medio de $S$ a la vista de
 $X$ ($\hat{S}_{LMSE}$):
