@@ -141,6 +141,25 @@ Siendo a un valor constante, donde a > 0.
 
 Obtenga la función de densidad de probabilidad de la variable aleatoria $Y$, $p_Y (y)$
 
+> **Respuesta**
+>
+> Primero, obtengamos la expresión de $X$ en función de $Y$
+>
+> $$
+> Y = aX ⟹ X = \frac{Y}{a}
+> $$
+>
+> Ahora podemos usar la siguiente fórmula para la probabilidad bajo un cambio de variable:
+>
+> $$
+> \begin{aligned}
+>     p_Y(y) &= p_X(x(y)) \left| \frac{d}{dy} x(y) \right| \\
+>     &= p_X\left(\frac{y}{a}\right) \left| \frac{d}{dy} \frac{y}{a} \right| \\
+>     &= \exp\left(-\frac{x}{a}\right) \left| \frac{1}{a} \right|, \quad \frac{y}{a} ≥ 0 \\
+>     &= \boxed{\frac{\exp\left(-\frac{1}{a}\right)}{a} , \quad y≥0}
+> \end{aligned}
+> $$
+
 ### Pregunta 2.b) Establezca la expresión de $\hat{A}_{\text{ML}}$
 
 Establezca la expresión del estimador de máxima verosimilitud del parámetro \hat{A}_{\text{ML}}, en
