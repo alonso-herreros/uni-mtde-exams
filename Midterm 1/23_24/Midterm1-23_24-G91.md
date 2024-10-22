@@ -162,8 +162,8 @@ Obtenga la función de densidad de probabilidad de la variable aleatoria $Y$, $p
 
 ### Pregunta 2.b) Establezca la expresión de $\hat{A}_{\text{ML}}$
 
-Establezca la expresión del estimador de máxima verosimilitud del parámetro \hat{A}_{\text{ML}}, en
-función de los valores de $K$ muestras de $Y$ tomadas independientemente, $\{Y^{(k)}\}_{k=1}^K$
+Establezca la expresión del estimador de máxima verosimilitud del parámetro $\hat{A}_{\text{ML}}$,
+en función de los valores de $K$ muestras de $Y$ tomadas independientemente, $\{Y^{(k)}\}_{k=1}^K$
 
 NOTA: Si no ha logrado resolver el apartado (a), utilice como distribución de la variable aleatoria
 $Y$, la siguiente expresión:
