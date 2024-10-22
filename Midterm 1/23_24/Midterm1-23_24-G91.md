@@ -112,10 +112,10 @@ $$
 > \end{aligned}
 > $$
 >
-> Lo cual no significa que no exista respuesta, sino que no existen máximos ni mínimos. En este caso,
-> analizaremos el crecimiento de la función: ya que es decreciente en todo su dominio, el máximo se
-> encuentra en el valor más pequeño de $s$. Como $s$ está acotado a $0<s<x$, el valor que buscamos
-> es $s=0$.
+> Lo cual no significa que no exista respuesta, sino que no existen máximos ni mínimos. En este
+> caso, analizaremos el crecimiento de la función: ya que es decreciente en todo su dominio, el
+> máximo se encuentra en el valor más pequeño de $s$. Como $s$ está acotado a $0<s<x$, el valor que
+> buscamos es $s=0$.
 >
 > $$
 > \boxed{\hat{S}_{\text{MAP}} = 0}
