@@ -7,6 +7,16 @@
 *Grado en Ingeniería de Sonido e Imagen*  
 *Grado en Ingeniería en Tecnologías de Telecomunicación*  
 
+$$
+\global\def\E#1{\mathbb E \left\{#1\right\}}
+\global\def\Var#1{\mathrm{Var} \left\{#1\right\}}
+\global\def\Cov{\mathrm{Cov}}
+\global\def\sgn{\mathrm{sgn}}
+\global\def\bdeclg#1#2{\enspace\overset{#1}{\underset{#2}{\lessgtr}}\enspace}
+\global\def\bdecgl#1#2{\enspace\overset{#1}{\underset{#2}{\gtrless}}\enspace}
+\global\def\est#1#2{\hat{#1}_{\text{#2}}}
+$$
+
 ---
 
 ### Table of contents
@@ -43,7 +53,7 @@ $$
 Bajo la hipótesis $H = 1$ (presencia de la palabra clave):
 
 $$
-p_{X|H}(x|1) = 2 \exp(−2x) x ≥ 0
+p_{X|H}(x|1) = 2 \exp(−2x), \; x ≥ 0
 $$
 
 ### Pregunta 1.a
@@ -51,22 +61,65 @@ Obtenga el decisor de Neyman-Pearson dado por $P_{FA} ≤ 0.1$.
 
 > **Respuesta**
 
+Our decision criteria is the following:
+
+$$
+g(x) = \frac{p_{X|H}(x|1)}{p_{X|H}(x|0)} \bdecgl{D_1}{D_0} \eta
+$$
+
 Since $p_{X|H}(x|1)$ is only defined for $x ≥ 0$, this means that the
-probability of $X$ taking values less than 0 when $H=1$ is 0.
+probability of $X$ taking values less than 0 when $H=1$ is 0, so if $x$ is less
+than 0 the only possible explanation is that $H=0$.
 
 $$
-x < 0 ⟹ h = 0
+X < 0 ⟹ H = 0
 $$
 
-Now we can focus on taking decisions **when $x≥0$**:
+Now we can focus on making decisions **when $x≥0$**:
 
-* $p_{X|H}(x|0)$ is defined
-* $|x+1|=x+1$
+* $p_{X|H}(x|1)$ is defined
+* $|x+1|=x+1 \implies p_{X|H}(x|0) = \frac{1}{2} \exp(−x - 1)$
 
 $$
 \begin{aligned}
     g(x) &= \frac{p_{X|H}(x|1)}{p_{X|H}(x|0)} \\
-    &= \frac{\exp(-x+1)}{2⋅2\exp(-2x)} \\
+    &= \frac{2\exp(-2x)}{\frac{1}{2}\exp(-x-1)} \\
+    &= 4 \exp(-2x + x+1) \\
+    &= 4 \exp(-x+1) \\
+\end{aligned}
+$$
+
+Decision region $\Omega_1$ for $D=1$:
+
+$$
+\begin{aligned}
+    g(x) &> \eta \\
+    4 \exp(-x+1) &> \eta \\
+    -x + 1 &> \ln (\frac{\eta}{4}) \\
+    x &< 1 - \ln (\frac{\eta}{4})
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    P_{FA} &= P_{D|H}(1|0) \\
+    &= \int_{\Omega_1} p_{x|H}(x|0) dx \\
+    &\Downarrow \text{working with } x>0 \\
+    &= \int_0^{1 - \ln (\frac{\eta}{4})} \frac{1}{2} \exp(−|x + 1|) dx \\
+    &= \frac{1}{2} \int_0^{1 - \ln (\frac{\eta}{4})} \exp(−x-1) dx \\
+    &= -\frac{1}{2} \exp(−x-1) \Big|_0^{1 - \ln (\frac{\eta}{4})} \\
+    &= -\frac{1}{2} \exp(−1 +\ln (4\eta) -1) + 1 \\
+    &= -2\eta
+\end{aligned}
+$$
+
+Applying the limit $P_{FA}$:
+
+$$
+\begin{aligned}
+    P_{FA} &= 0.1 \\
+    -2\eta &= 0.1 \\
+    \eta &= -0.05
 \end{aligned}
 $$
 
