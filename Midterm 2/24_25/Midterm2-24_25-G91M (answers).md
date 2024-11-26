@@ -11,6 +11,14 @@
 
 ### Table of contents
 
+* [Problema 1](#problema-1)
+    * [Pregunta 1.a](#pregunta-1a)
+    * [Pregunta 1.b](#pregunta-1b)
+* [Problema 2](#problema-2)
+    * [Pregunta 2.a](#pregunta-2a)
+    * [Pregunta 2.b](#pregunta-2b)
+    * [Pregunta 2.c](#pregunta-2c)
+
 ---
 
 ## Problema 1
@@ -40,6 +48,27 @@ $$
 
 ### Pregunta 1.a
 Obtenga el decisor de Neyman-Pearson dado por $P_{FA} ≤ 0.1$.
+
+> **Respuesta**
+
+Since $p_{X|H}(x|1)$ is only defined for $x ≥ 0$, this means that the
+probability of $X$ taking values less than 0 when $H=1$ is 0.
+
+$$
+x < 0 ⟹ h = 0
+$$
+
+Now we can focus on taking decisions **when $x≥0$**:
+
+* $p_{X|H}(x|0)$ is defined
+* $|x+1|=x+1$
+
+$$
+\begin{aligned}
+    g(x) &= \frac{p_{X|H}(x|1)}{p_{X|H}(x|0)} \\
+    &= \frac{\exp(-x+1)}{2⋅2\exp(-2x)} \\
+\end{aligned}
+$$
 
 ### Pregunta 1.b
 Determine la probabilidad de detección del decisor de Neyman-Pearson.
