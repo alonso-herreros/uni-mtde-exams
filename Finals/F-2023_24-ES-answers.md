@@ -27,18 +27,29 @@ $$
 
 donde $a$ y $b$ son dos constantes.
 
-* a) Determine la esperanza matemática (valor medio) y varianza de la variable
-  aleatoria $X_1$.
-* b) Determine la esperanza matemática (valor medio) y varianza de la variable
-  aleatoria $X_2$.
-* c) ¿Es el estimador $\hat{θ}$ insesgado? Justifique su respuesta.
-* d) Calcule la varianza del estimador $\hat{θ}$.
-* e) Obtenga el valor de la constante $b$, en función de $a$, que hace que el
-  estimador $\hat{θ}$ sea insesgado. Reescriba la expresión del estimador
-  $\hat{θ}$ para que dependa sólo de la constante $a$.
-* f) Determine el valor de $a$, tal que el estimador obtenido en el apartado
-  anterior tenga la menor varianza posible. ¿Cuál sería, por tanto, la expresión
-  del estimador $\hat{θ}$ insesgado de mínima varianza?
+### Pregunta 1.a)
+Determine la esperanza matemática (valor medio) y varianza de la variable
+aleatoria $X_1$.
+
+### Pregunta 1.b)
+Determine la esperanza matemática (valor medio) y varianza de la variable
+aleatoria $X_2$.
+
+### Pregunta 1.c)
+¿Es el estimador $\hat{θ}$ insesgado? Justifique su respuesta.
+
+### Pregunta 1.d)
+Calcule la varianza del estimador $\hat{θ}$.
+
+### Pregunta 1.e)
+Obtenga el valor de la constante $b$, en función de $a$, que hace que el
+estimador $\hat{θ}$ sea insesgado. Reescriba la expresión del estimador
+$\hat{θ}$ para que dependa sólo de la constante $a$.
+
+### Pregunta 1.f)
+Determine el valor de $a$, tal que el estimador obtenido en el apartado anterior
+tenga la menor varianza posible. ¿Cuál sería, por tanto, la expresión del
+estimador $\hat{θ}$ insesgado de mínima varianza?
 
 ## Problema 2
 
@@ -73,11 +84,16 @@ $$
 \end{aligned}
 $$
 
-* a) Determine $p_{X|H}(x|0)$ y $p_{X|H}(x|1)$. Represente, en la misma gráfica,
-  ambas verosimilitudes.
-* b) Obtenga el clasificador ML basado en $X$.
-* c) Calcule la probabilidad de falsa alarma del clasificador ML. Exprese esta
-  probabilidad utilizando la función:
+### Pregunta 3.a)
+Determine $p_{X|H}(x|0)$ y $p_{X|H}(x|1)$. Represente, en la misma gráfica,
+ambas verosimilitudes.
+
+### Pregunta 3.b)
+Obtenga el clasificador ML basado en $X$.
+
+### Pregunta 3.c)
+Calcule la probabilidad de falsa alarma del clasificador ML. Exprese esta
+probabilidad utilizando la función:
 
     $$
     F(x) = ∫_{-∞}^x \frac{1}{\sqrt{2π}} \exp\left(-\frac{t^2}{2}\right) dt
@@ -95,10 +111,13 @@ Todas las muestras se proyectan en un espacio vectorial de 2 características
 ($X_1$ y $X_2$). Suponiendo que se utiliza el algoritmo de clasificación $k$-NN
 ponderado, responda a las siguientes preguntas:
 
-* a) ¿Cuál sería la clase asignada para la muestra de test si $k = 1$? Razone su
-  respuesta.
-* b) Para este conjunto de datos de entrenamiento, ¿recomendaría utilizar $k =
-  11$? Razone su respuesta.
+### Pregunta 4.a)
+¿Cuál sería la clase asignada para la muestra de test si $k = 1$? Razone su
+respuesta.
+
+### Pregunta 4.b)
+Para este conjunto de datos de entrenamiento, ¿recomendaría utilizar $k = 11$?
+Razone su respuesta.
 
 ## Problema 5
 
