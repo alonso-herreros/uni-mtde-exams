@@ -1,8 +1,32 @@
-## Teoría Moderna de la Detección y Estimación
+## Teoría Moderna de la Detección y Estimación <!-- omit in toc -->
 
 # Examen Final Ordinario
 
 *Curso Académico 2023-2024*
+
+---
+
+### Tabla de contenidos <!-- omit in toc -->
+
+* [Problema 1](#problema-1)
+    * [Pregunta 1.a) ✓](#pregunta-1a-)
+    * [Pregunta 1.b) ✓](#pregunta-1b-)
+    * [Pregunta 1.c)](#pregunta-1c)
+    * [Pregunta 1.d)](#pregunta-1d)
+    * [Pregunta 1.e)](#pregunta-1e)
+    * [Pregunta 1.f)](#pregunta-1f)
+* [Problema 2](#problema-2)
+* [Problema 3](#problema-3)
+    * [Pregunta 3.a)](#pregunta-3a)
+    * [Pregunta 3.b)](#pregunta-3b)
+    * [Pregunta 3.c)](#pregunta-3c)
+* [Problema 4](#problema-4)
+    * [Pregunta 4.a)](#pregunta-4a)
+    * [Pregunta 4.b)](#pregunta-4b)
+* [Problema 5](#problema-5)
+* [Problema 6](#problema-6)
+    * [Pregunta.1](#pregunta1)
+    * [Pregunta.2](#pregunta2)
 
 ---
 
@@ -78,9 +102,29 @@ aleatoria $X_1$.
 >
 > En resumen: $\boxed{\mathbb{E}\{X_1\} = θ;\; \mathrm{Var} \{X_1\} = θ²}$
 
-### Pregunta 1.b)
+### Pregunta 1.b) ✓
 Determine la esperanza matemática (valor medio) y varianza de la variable
 aleatoria $X_2$.
+
+> **Respuesta** (✓)
+>
+> $$
+> X_2 ∼ U[0,θ] ⟹ \mathbb{E} \{X_2\} = \frac{θ-0}{2} = \boxed{\frac{θ}{2}}
+> $$
+>
+> $$
+> \begin{aligned}
+>     \mathrm{Var} \{X_2\} &= \mathbb{E} \{X_2²\} - \mathbb{E}² \{X_2\} \\
+>     &= ∫_{(X_2)} x² p_{X_2} (x) dx - \left(\frac{θ}{2}\right) \\
+>     &= ∫_0^θ x^2 \frac{1}{θ} dx - \frac{θ²}{4} \\
+>     &= \frac{1}{θ} \frac{x³}{3} \Bigg|_{x=0}^{θ} - \frac{θ²}{4} \\
+>     &= \frac{θ²}{3} - \frac{θ²}{4} \\
+>     & \boxed{= \frac{θ²}{12}}
+> \end{aligned}
+> $$
+>
+> En resumen: $\boxed{\mathbb{E}\{X_2\} = \frac{θ}{2};\; \mathrm{Var} \{X_2\} =
+> \frac{θ²}{12}}$
 
 ### Pregunta 1.c)
 ¿Es el estimador $\hat{θ}$ insesgado? Justifique su respuesta.
