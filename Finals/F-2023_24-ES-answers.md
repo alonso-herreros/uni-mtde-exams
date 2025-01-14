@@ -2,7 +2,7 @@
 
 # Examen Final Ordinario
 
-*Curso Académico 2023-2024*  
+*Curso Académico 2023-2024*
 
 ---
 
@@ -27,9 +27,56 @@ $$
 
 donde $a$ y $b$ son dos constantes.
 
-### Pregunta 1.a)
+### Pregunta 1.a) ✓
 Determine la esperanza matemática (valor medio) y varianza de la variable
 aleatoria $X_1$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \begin{aligned}
+>     \mathbb{E} \{X_1\} &= ∫_{(X_1)} x p_{X_1}(x) dx \\
+>     &= ∫_0^∞ x \frac{1}{θ} \exp\left(-\frac{x}{θ}\right) dx \\
+>     &= \frac{1}{θ} ∫_0^∞ x \exp\left(-\frac{x}{θ}\right) dx \\
+>     & \,\left\downarrow\; \left[\begin{aligned}
+>         & u = x;   && dv = \exp\left(-\tfrac{x}{θ}\right) dx \\
+>         & du = dx; && v = - θ \exp\left(-\tfrac{x}{θ}\right)
+>     \end{aligned}\right] \right. \\
+>     &= \frac{1}{θ} \left(- x θ \exp\left(-\tfrac{x}{θ}\right)\Big|_{x=0}^∞
+>         - ∫_0^∞ - θ \exp\left(-\tfrac{x}{θ}\right) dx \right) \\
+>     &= - x \exp\left(-\tfrac{x}{θ}\right)\Bigg|_{x=0}^∞
+>         + ∫_0^∞ \exp\left(-\tfrac{x}{θ}\right) dx \\
+>     &= - (\tfrac{∞}{e^∞} - 0⋅1)
+>         - θ \exp\left(-\frac{x}{θ}\right)\Bigg|_{x=0}^∞ \\
+>     &= 0 - θ ⋅ (0 - 1) \\
+>     &\boxed{= θ}
+> \end{aligned}
+> $$
+>
+> $$
+> \begin{aligned}
+>     \mathrm{Var} \{X_1\} &= \mathbb{E} \{X_1²\} - \mathbb{E}² \{X_1\} \\
+>     &= ∫_0^∞ x² p_{X_1}(x) dx - θ² \\
+>     &= ∫_0^∞ x² \frac{1}{θ} \exp\left(-\frac{x}{θ}\right) dx - θ² \\
+>     &= \frac{1}{θ} ∫_0^∞ x² \exp\left(-\frac{x}{θ}\right) dx - θ² \\
+>     & \,\left\downarrow\; \left[\begin{aligned}
+>             & u = x²;       && dv = \exp\left(-\tfrac{x}{θ}\right) dx \\
+>             & du = 2x dx; && v = - θ \exp\left(-\tfrac{x}{θ}\right)
+>         \end{aligned}\right] \right. \\
+>     &= \frac1θ \left(-x² θ \exp\left(-\tfrac{x}{θ}\right)\Big|_{x=0}^∞
+>         - ∫_0^∞ - θ \exp\left(-\tfrac{x}{θ}\right) 2x dx \right) - θ² \\
+>     &= - x² \exp\left(-\tfrac{x}{θ}\right)\Bigg|_{x=0}^∞
+>         + 2∫_0^∞ x\exp\left(-\tfrac{x}{θ}\right) dx - θ² \\
+>     & \,\left\downarrow\; \left[\begin{aligned}\textstyle
+>             & \frac{1}{θ}∫_0^∞ x\exp\left(-\tfrac{x}{θ}\right) dx = θ \\
+>             & ∫_0^∞ x\exp\left(-\tfrac{x}{θ}\right) dx = θ²
+>         \end{aligned}\right] \right. \\
+>     &= - (\tfrac{∞²}{e^∞} - 0⋅1) + 2θ² - θ² \\
+>     & \boxed{= θ²}
+> \end{aligned}
+> $$
+>
+> En resumen: $\boxed{\mathbb{E}\{X_1\} = θ;\; \mathrm{Var} \{X_1\} = θ²}$
 
 ### Pregunta 1.b)
 Determine la esperanza matemática (valor medio) y varianza de la variable
