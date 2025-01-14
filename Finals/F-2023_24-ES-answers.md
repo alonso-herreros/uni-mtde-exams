@@ -11,7 +11,7 @@
 * [Problema 1](#problema-1)
     * [Pregunta 1.a) ✓](#pregunta-1a-)
     * [Pregunta 1.b) ✓](#pregunta-1b-)
-    * [Pregunta 1.c)](#pregunta-1c)
+    * [Pregunta 1.c) ✓](#pregunta-1c-)
     * [Pregunta 1.d)](#pregunta-1d)
     * [Pregunta 1.e)](#pregunta-1e)
     * [Pregunta 1.f)](#pregunta-1f)
@@ -126,8 +126,25 @@ aleatoria $X_2$.
 > En resumen: $\boxed{\mathbb{E}\{X_2\} = \frac{θ}{2};\; \mathrm{Var} \{X_2\} =
 > \frac{θ²}{12}}$
 
-### Pregunta 1.c)
+### Pregunta 1.c) ✓
 ¿Es el estimador $\hat{θ}$ insesgado? Justifique su respuesta.
+
+> **Respuesta** (✓)
+>
+> $$
+> \def\E#1{\mathbb{E} \left\{#1\right\}}
+> \begin{aligned}
+>     \mathrm{Sesgo}(\hat{θ}) &= \E{θ - \hat{θ}} \\
+>     &= \E{θ} - \E{\hat{θ}} \\
+>     &= θ - \E{aX_1 + bX_2} \\
+>     &= θ - a\E{X_1} + b\E{X_2} \\
+>     &= θ - aθ - b\frac{θ}{2} \\
+>     &= \left(1 - a - \frac{b}{2}\right) θ
+> \end{aligned}
+> $$
+>
+> El estimador $\hat{θ}$ está sesgado a menos que $a$ y $b$ cumplan la ecuación
+> $a+\frac{b}{2} = 1$.
 
 ### Pregunta 1.d)
 Calcule la varianza del estimador $\hat{θ}$.
