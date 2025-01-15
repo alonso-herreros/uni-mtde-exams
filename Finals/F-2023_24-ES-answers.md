@@ -201,10 +201,43 @@ $\hat{θ}$ para que dependa sólo de la constante $a$.
 > \boxed{\hat{θ} = aX₁ + 2(1-a) X₂}
 > $$
 
-### Pregunta 1.f)
+### Pregunta 1.f) ✓
 Determine el valor de $a$, tal que el estimador obtenido en el apartado anterior
 tenga la menor varianza posible. ¿Cuál sería, por tanto, la expresión del
 estimador $\hat{θ}$ insesgado de mínima varianza?
+
+> **Respuesta** (✓)
+>
+> Sustituyendo $b$ en la varianza del estimador, tenemos la siguiente expresión:
+>
+> $$
+> \begin{aligned}
+>     \mathrm{Var} \{\hat{θ}\} &= \left(a² + \frac{(2(1-a))²}{12}\right) θ² \\
+>     &= \left(\frac{3a² + \left(1-2a+a²\right)}{3}\right) θ² \\
+>     &= \frac{θ²}{3} \left(4a² - 2a + 1\right) \\
+> \end{aligned}
+> $$
+>
+> Para minimizar, igualaremos la derivada con respecto a $a$ a $0$:
+>
+> $$
+> \begin{aligned}
+>     \frac{d}{da} \mathrm{Var} \{\hat{θ}\} &= 0 \\
+>     \frac{d}{da} \frac{θ²}{3} \left(4a² - 2a + 1\right) &= 0 \\
+>     \frac{d}{da} (4a² - 2a + 1) &= 0 \\
+>     8a - 2 &= 0 \\
+>     \boxed{a = \frac{1}{4}} \\
+> \end{aligned}
+> $$
+>
+> Sustituyendo en la expresión de $\hat{θ}$, obtenemos
+>
+> $$
+> \begin{aligned}
+>     \hat{θ}^* &= \frac{1}{4} X₁ + 2(1-\frac{1}{4}) X₂ \\
+>     &= \boxed{\frac{1}{4}X₁ + \frac{3}{2}X₂}
+> \end{aligned}
+> $$
 
 ## Problema 2
 
