@@ -32,34 +32,34 @@
 
 ## Problema 1
 
-Sean $X_1$ y $X_2$ dos variables aleatorias independientes. $X_1$ sigue una
+Sean $X₁$ y $X₂$ dos variables aleatorias independientes. $X₁$ sigue una
 distribución exponencial unilateral:
 
 $$
-p_{X_1}(x_1) = \frac{1}{θ} \exp\left( −\frac{x_1}{θ} \right) \quad 0 ≤ x_1 < ∞
+p_{X₁}(x₁) = \frac{1}{θ} \exp\left( −\frac{x₁}{θ} \right) \quad 0 ≤ x₁ < ∞
 $$
 
 donde $θ > 0$ es un parámetro determinista de valor desconocido, mientras que
-$X_2$ sigue una distribución uniforme en el intervalo $[0, θ]$, representando
+$X₂$ sigue una distribución uniforme en el intervalo $[0, θ]$, representando
 $θ$ el mismo parámetro en ambas distribuciones.
 
 Para estimar el valor de θ, se propone el siguiente estimador:
 
 $$
-\hat{θ} = aX_1 + bX_2
+\hat{θ} = aX₁ + bX₂
 $$
 
 donde $a$ y $b$ son dos constantes.
 
 ### Pregunta 1.a) ✓
 Determine la esperanza matemática (valor medio) y varianza de la variable
-aleatoria $X_1$.
+aleatoria $X₁$.
 
 > **Respuesta** (✓)
 >
 > $$
 > \begin{aligned}
->     \mathbb{E} \{X_1\} &= ∫_{(X_1)} x p_{X_1}(x) dx \\
+>     \mathbb{E} \{X₁\} &= ∫_{(X₁)} x p_{X₁}(x) dx \\
 >     &= ∫_0^∞ x \frac{1}{θ} \exp\left(-\frac{x}{θ}\right) dx \\
 >     &= \frac{1}{θ} ∫_0^∞ x \exp\left(-\frac{x}{θ}\right) dx \\
 >     & \,\left\downarrow\; \left[\begin{aligned}
@@ -79,8 +79,8 @@ aleatoria $X_1$.
 >
 > $$
 > \begin{aligned}
->     \mathrm{Var} \{X_1\} &= \mathbb{E} \{X_1²\} - \mathbb{E}² \{X_1\} \\
->     &= ∫_0^∞ x² p_{X_1}(x) dx - θ² \\
+>     \mathrm{Var} \{X₁\} &= \mathbb{E} \{X₁²\} - \mathbb{E}² \{X₁\} \\
+>     &= ∫_0^∞ x² p_{X₁}(x) dx - θ² \\
 >     &= ∫_0^∞ x² \frac{1}{θ} \exp\left(-\frac{x}{θ}\right) dx - θ² \\
 >     &= \frac{1}{θ} ∫_0^∞ x² \exp\left(-\frac{x}{θ}\right) dx - θ² \\
 >     & \,\left\downarrow\; \left[\begin{aligned}
@@ -100,30 +100,30 @@ aleatoria $X_1$.
 > \end{aligned}
 > $$
 >
-> En resumen: $\boxed{\mathbb{E}\{X_1\} = θ;\; \mathrm{Var} \{X_1\} = θ²}$
+> En resumen: $\boxed{\mathbb{E}\{X₁\} = θ;\; \mathrm{Var} \{X₁\} = θ²}$
 
 ### Pregunta 1.b) ✓
 Determine la esperanza matemática (valor medio) y varianza de la variable
-aleatoria $X_2$.
+aleatoria $X₂$.
 
 > **Respuesta** (✓)
 >
 > $$
-> X_2 ∼ U[0,θ] ⟹ \mathbb{E} \{X_2\} = \frac{θ-0}{2} = \boxed{\frac{θ}{2}}
+> X₂ ∼ U[0,θ] ⟹ \mathbb{E} \{X₂\} = \frac{θ-0}{2} = \boxed{\frac{θ}{2}}
 > $$
 >
 > $$
 > \begin{aligned}
->     \mathrm{Var} \{X_2\} &= \mathbb{E} \{X_2²\} - \mathbb{E}² \{X_2\} \\
->     &= ∫_{(X_2)} x² p_{X_2} (x) dx - \left(\frac{θ}{2}\right) \\
->     &= ∫_0^θ x^2 \frac{1}{θ} dx - \frac{θ²}{4} \\
+>     \mathrm{Var} \{X₂\} &= \mathbb{E} \{X₂²\} - \mathbb{E}² \{X₂\} \\
+>     &= ∫_{(X₂)} x² p_{X₂} (x) dx - \left(\frac{θ}{2}\right) \\
+>     &= ∫_0^θ x² \frac{1}{θ} dx - \frac{θ²}{4} \\
 >     &= \frac{1}{θ} \frac{x³}{3} \Bigg|_{x=0}^{θ} - \frac{θ²}{4} \\
 >     &= \frac{θ²}{3} - \frac{θ²}{4} \\
 >     & \boxed{= \frac{θ²}{12}}
 > \end{aligned}
 > $$
 >
-> En resumen: $\boxed{\mathbb{E}\{X_2\} = \frac{θ}{2};\; \mathrm{Var} \{X_2\} =
+> En resumen: $\boxed{\mathbb{E}\{X₂\} = \frac{θ}{2};\; \mathrm{Var} \{X₂\} =
 > \frac{θ²}{12}}$
 
 ### Pregunta 1.c) ✓
@@ -136,8 +136,8 @@ aleatoria $X_2$.
 > \begin{aligned}
 >     \mathrm{Sesgo}(\hat{θ}) &= \E{θ - \hat{θ}} \\
 >     &= \E{θ} - \E{\hat{θ}} \\
->     &= θ - \E{aX_1 + bX_2} \\
->     &= θ - a\E{X_1} + b\E{X_2} \\
+>     &= θ - \E{aX₁ + bX₂} \\
+>     &= θ - a\E{X₁} + b\E{X₂} \\
 >     &= θ - aθ - b\frac{θ}{2} \\
 >     &= \left(1 - a - \frac{b}{2}\right) θ
 > \end{aligned}
@@ -204,7 +204,7 @@ Calcule la probabilidad de falsa alarma del clasificador ML. Exprese esta
 probabilidad utilizando la función:
 
     $$
-    F(x) = ∫_{-∞}^x \frac{1}{\sqrt{2π}} \exp\left(-\frac{t^2}{2}\right) dt
+    F(x) = ∫_{-∞}^x \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt
     $$
 
 ## Problema 4
@@ -213,10 +213,10 @@ Suponga que se dispone del siguiente conjunto de datos de entramiento en el que
 se incluyen muestras de la clase positiva ($+$) y muestras de la clase negativa
 ($−$), así como una muestra de test ($△$).
 
-![alt](fig/F-2023_24-ES-4.1.png)
+![alt](fig/F-2023₂4-ES-4.1.png)
 
 Todas las muestras se proyectan en un espacio vectorial de 2 características
-($X_1$ y $X_2$). Suponiendo que se utiliza el algoritmo de clasificación $k$-NN
+($X₁$ y $X₂$). Suponiendo que se utiliza el algoritmo de clasificación $k$-NN
 ponderado, responda a las siguientes preguntas:
 
 ### Pregunta 4.a)
