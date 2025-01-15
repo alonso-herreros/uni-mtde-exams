@@ -287,9 +287,34 @@ $$
 \end{aligned}
 $$
 
-### Pregunta 3.a)
+### Pregunta 3.a) ✓
 Determine $p_{X|H}(x|0)$ y $p_{X|H}(x|1)$. Represente, en la misma gráfica,
 ambas verosimilitudes.
+
+> **Respuesta** (✓)
+>
+> Para $H=0$:
+>
+> $$
+> X = \sqrt{2}N ⟹ \begin{cases}
+>     m_X = \sqrt{2}m_N = 0\\
+>     v_X = (\sqrt{2})²v_N = 2
+> \end{cases}
+> $$
+>
+> Para $H=1$:
+>
+> $$
+> X = 1 + N ⟹ \begin{cases}
+>     m_X = 1 + m_N = 1 \\
+>     v_X = v_N = 1
+> \end{cases}
+> $$
+>
+> $$
+> \boxed{p_{X|H}(x|0) = G(0,2)} \\
+> \boxed{p_{X|H}(x|1) = G(1,1)}
+> $$
 
 ### Pregunta 3.b)
 Obtenga el clasificador ML basado en $X$.
