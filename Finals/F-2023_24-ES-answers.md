@@ -146,8 +146,35 @@ aleatoria $X₂$.
 > El estimador $\hat{θ}$ está sesgado a menos que $a$ y $b$ cumplan la ecuación
 > $a+\frac{b}{2} = 1$.
 
-### Pregunta 1.d)
+### Pregunta 1.d) ✓
 Calcule la varianza del estimador $\hat{θ}$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \def\E#1{\mathbb{E} \left\{#1\right\}}
+> \def\Var#1{\mathrm{Var} \left\{#1\right\}}
+> \def\Cov#1{\mathrm{Cov} \left\{#1\right\}}
+>
+> \begin{aligned}
+>     \Var{\hat{θ}} &=&& \E{\hat{θ}²} - \E{\hat{θ}}² \\
+>     &=&& \E{(aX₁ + bX₂)²} - \E{aX₁ + bX₂}² \\
+>     &=&& \E{a²X₁² + 2abX₁X₂ + b²X₂²} - \left(a\E{X₁} + b\E{X₂}\right)² \\
+>     &=&& a²\E{X₁²} + 2ab\E{X₁X₂} + b²\E{X₂²} - (aθ + b\tfrac{θ}{2})² \\
+>     &=&& a²(2θ²) + 2ab(\E{X₁}\E{X₂} + \cancel{\Cov{X₁, X₂})} \\
+>     &&& + b² ·\left(\frac{θ²}{3}\right)
+>         - \left(a²θ² + abθ² + b²\frac{θ²}{4}\right) \\
+>     &=&& 2a²θ² + \cancel{2ab θ ⋅ \frac{θ}{2}} + 0 + \frac{b²θ²}{3}
+>         - a²θ² - \cancel{abθ²} - \frac{b²θ²}{4} \\
+>     &=&& \left(a² + \frac{b²}{12}\right) θ²
+> \end{aligned}
+> $$
+>
+> Since both variables are independent, the expresssion of the variance is:
+>
+> $$
+> \boxed{\mathrm{Var}\{\hat{θ}\} = \left(a² + \frac{b²}{12}\right) θ²}
+> $$
 
 ### Pregunta 1.e)
 Obtenga el valor de la constante $b$, en función de $a$, que hace que el
