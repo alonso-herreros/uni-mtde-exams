@@ -233,7 +233,7 @@ estimador $\hat{θ}$ insesgado de mínima varianza?
 > \end{aligned}
 > $$
 
-## Problema 2
+## Problema 2 ✓
 
 Un sistema de vigilancia se encarga de detectar intrusos en un edificio. Se
 considera el siguiente par de hipótesis:
@@ -249,6 +249,27 @@ alarma (es decir, aceptar la hipótesis $H = 1$)? Justifique su respuesta.
 
 Nota: para la resolución del problema, considere que el coste de acierto
 asociado a cada hipótesis es nulo.
+
+> **Respuesta** (✓)
+>
+> $$
+> P(1|x) = 0.05 ⟹ P(0|x) = 0.95 \\
+> $$
+>
+> Coloquemos todos los valores en el detector bayesiano:
+>
+> $$
+> \def\decgl#1#2{\enspace\overset{#1}{\underset{#2}{\gtrless}}\enspace}
+>
+> \begin{aligned}
+>     \frac{P_{H|X}(1|x)}{P_{H|X}(0|x)} &\decgl{D₁}{D₀} \frac{c₁₀-c₀₀}{c₀₁-c₁₁} \\
+>     \frac{0.05}{0.95} &\decgl{D₁}{D₀} \frac{c₁₀-0}{10c₁₀-0} \\
+>     0.053 &\decgl{D₁}{D₀} 0.1 \\
+> \end{aligned}
+> $$
+>
+> El sistema debería aceptar la hipótesis $H=0$, según el detector bayesiano.
+> Es decir, **no se deberia enviar un mensaje de alarma**
 
 ## Problema 3
 
