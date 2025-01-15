@@ -8,13 +8,13 @@
 
 ### Tabla de contenidos <!-- omit in toc -->
 
-* [Problema 1](#problema-1)
+* [Problema 1 ✓](#problema-1-)
     * [Pregunta 1.a) ✓](#pregunta-1a-)
     * [Pregunta 1.b) ✓](#pregunta-1b-)
     * [Pregunta 1.c) ✓](#pregunta-1c-)
-    * [Pregunta 1.d)](#pregunta-1d)
-    * [Pregunta 1.e)](#pregunta-1e)
-    * [Pregunta 1.f)](#pregunta-1f)
+    * [Pregunta 1.d) ✓](#pregunta-1d-)
+    * [Pregunta 1.e) ✓](#pregunta-1e-)
+    * [Pregunta 1.f) ✓](#pregunta-1f-)
 * [Problema 2](#problema-2)
 * [Problema 3](#problema-3)
     * [Pregunta 3.a)](#pregunta-3a)
@@ -30,7 +30,7 @@
 
 ---
 
-## Problema 1
+## Problema 1 ✓
 
 Sean $X₁$ y $X₂$ dos variables aleatorias independientes. $X₁$ sigue una
 distribución exponencial unilateral:
