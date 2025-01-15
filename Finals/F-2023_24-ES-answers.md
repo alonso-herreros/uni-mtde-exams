@@ -176,10 +176,30 @@ Calcule la varianza del estimador $\hat{θ}$.
 > \boxed{\mathrm{Var}\{\hat{θ}\} = \left(a² + \frac{b²}{12}\right) θ²}
 > $$
 
-### Pregunta 1.e)
+### Pregunta 1.e) ✓
 Obtenga el valor de la constante $b$, en función de $a$, que hace que el
 estimador $\hat{θ}$ sea insesgado. Reescriba la expresión del estimador
 $\hat{θ}$ para que dependa sólo de la constante $a$.
+
+> **Respuesta** (✓)
+>
+> Para que el estimador $\hat{θ}$ sea insesgado se debe cumplir la siguiente
+> condicion:
+>
+> $$
+> \begin{aligned}
+>     \mathrm{Sesgo}(\hat{θ}) &= 0 \\
+>     \left(1 - a - \frac{b}{2}\right) θ &= 0 \\
+>     a + \frac{b}{2} &= 1 \\
+>     \boxed{b = 2(1-a)}
+> \end{aligned}
+> $$
+>
+> Con esta expresion de $b$ podemos reescribir $\hat{θ}$:
+>
+> $$
+> \boxed{\hat{θ} = aX₁ + 2(1-a) X₂}
+> $$
 
 ### Pregunta 1.f)
 Determine el valor de $a$, tal que el estimador obtenido en el apartado anterior
