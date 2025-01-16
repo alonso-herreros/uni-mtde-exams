@@ -166,7 +166,7 @@ Calcule la varianza del estimador $\hat{θ}$.
 >         - \left(a²θ² + abθ² + b²\frac{θ²}{4}\right) \\
 >     &=&& 2a²θ² + \cancel{2ab θ ⋅ \frac{θ}{2}} + 0 + \frac{b²θ²}{3}
 >         - a²θ² - \cancel{abθ²} - \frac{b²θ²}{4} \\
->     &= \boxed{\left(a² + \frac{b²}{12}\right) θ²}
+>     &=&& \boxed{\left(a² + \frac{b²}{12}\right) θ²}
 > \end{aligned}
 > $$
 
