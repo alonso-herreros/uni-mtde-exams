@@ -15,11 +15,11 @@
     * [Pregunta 1.d) ✓](#pregunta-1d-)
     * [Pregunta 1.e) ✓](#pregunta-1e-)
     * [Pregunta 1.f) ✓](#pregunta-1f-)
-* [Problema 2](#problema-2)
-* [Problema 3](#problema-3)
-    * [Pregunta 3.a)](#pregunta-3a)
-    * [Pregunta 3.b)](#pregunta-3b)
-    * [Pregunta 3.c)](#pregunta-3c)
+* [Problema 2 ✓](#problema-2-)
+* [Problema 3 ✓](#problema-3-)
+    * [Pregunta 3.a) ✓](#pregunta-3a-)
+    * [Pregunta 3.b) ✓](#pregunta-3b-)
+    * [Pregunta 3.c) ✓](#pregunta-3c-)
 * [Problema 4](#problema-4)
     * [Pregunta 4.a)](#pregunta-4a)
     * [Pregunta 4.b)](#pregunta-4b)
@@ -271,7 +271,7 @@ asociado a cada hipótesis es nulo.
 > El sistema debería aceptar la hipótesis $H=0$, según el detector bayesiano.
 > Es decir, **no se deberia enviar un mensaje de alarma**
 
-## Problema 3
+## Problema 3 ✓
 
 Sabiendo que $N$ es una variable aleatoria cuya función de densidad de
 probabilidad es una gaussiana de media 0 y varianza 1:
@@ -365,13 +365,38 @@ Obtenga el clasificador ML basado en $X$.
 > \end{cases}}
 > $$
 
-### Pregunta 3.c)
+### Pregunta 3.c) ✓
 Calcule la probabilidad de falsa alarma del clasificador ML. Exprese esta
 probabilidad utilizando la función:
 
-    $$
-    F(x) = ∫_{-∞}^x \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt
-    $$
+$$
+F(x) = ∫_{-∞}^x \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt
+$$
+
+> **Respuesta** (✓)
+>
+> $$
+> \begin{aligned}
+>     P_{FA} &= P_{D|H}(1|0) \\
+>     &= ∫_{Ω₁} p_{X|H} (x|0) dx \\
+>     &= ∫_{x_{b1}}^{x_{b2}} \frac{1}{\sqrt{4π}}
+>         \exp\left(-\frac{x²}{4}\right) dx \\
+>     &\left\downarrow\left[\begin{aligned}
+>             t=\tfrac{x}{\sqrt{2}} &⟹ dt = \tfrac{1}{\sqrt{2}}dx;\; x=\sqrt{2}t \\
+>             x=x_{b1} &⟹ t=\tfrac{x_{b1}}{\sqrt{2}} \\
+>             x=x_{b2} &⟹ t=\tfrac{x_{b2}}{\sqrt{2}} \\
+>         \end{aligned}\right]\right.\\
+>     &= ∫_{\tfrac{x_{b1}}{\sqrt{2}}}^{\tfrac{x_{b2}}{\sqrt{2}}}
+>         \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt \\
+>     &= ∫_{-∞}^{\tfrac{x_{b2}}{\sqrt{2}}}
+>         \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt
+>         - ∫_{-∞}^{\tfrac{x_{b1}}{\sqrt{2}}}
+>         \frac{1}{\sqrt{2π}} \exp\left(-\frac{t²}{2}\right) dt \\
+>     &= F\left(\frac{x_{b2}}{\sqrt{2}}\right)
+>         - F\left(\frac{x_{b1}}{\sqrt{2}}\right) \\
+>     &\boxed{= F(2.715) - F(0.113)}
+> \end{aligned}
+> $$
 
 ## Problema 4
 
