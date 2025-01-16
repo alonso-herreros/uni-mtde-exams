@@ -433,7 +433,7 @@ Razone su respuesta.
 > utilizar $k=11$ con un algoritmo uniforme. En cambio, con un algoritmo
 > ponderado, este valor sí es aceptable.
 
-## Problema 5
+## Problema 5 ✓
 
 Razone si la siguiente afirmación es cierta o falsa:
 
@@ -444,6 +444,12 @@ Razone si la siguiente afirmación es cierta o falsa:
 
 En caso de ser falsa, haga la(s) correccione(s) necesaria(s) para que la
 afirmación sea cierta.
+
+> **Respuesta** (✓)
+>
+> La afirmación es cierta. Cuando el hiperparámetro es 0, se elimina la
+> regularizacion y la función que se minimiza pasa a ser la suma de los errores
+> al cuadrado.
 
 ## Problema 6
 Responda brevemente a las siguientes preguntas:
