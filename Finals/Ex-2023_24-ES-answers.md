@@ -11,7 +11,7 @@
 * [Problema 1](#problema-1)
     * [Pregunta 1.a) ✓](#pregunta-1a-)
     * [Pregunta 1.b) ✓](#pregunta-1b-)
-    * [Pregunta 1.c)](#pregunta-1c)
+    * [Pregunta 1.c) ✓](#pregunta-1c-)
     * [Pregunta 1.d)](#pregunta-1d)
     * [Pregunta 1.e)](#pregunta-1e)
 * [Problema 2](#problema-2)
@@ -94,8 +94,33 @@ Obtenga el estimador MMSE de $X$ dado $Y$, $\hat{X}_{MMSE}(Y)$.
 > \end{aligned}
 > $$
 
-### Pregunta 1.c)
+### Pregunta 1.c) ✓
 Determine el estimador MAD de $X$ dado $Y$, $\hat{X}_{MAD}(Y)$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \hat{X}_{MAD}(Y) = \mathrm{median} (X | Y) \\
+> \begin{aligned}
+>     ∫_{-∞}^{\hat{X}_{MAD}} p_{X|Y}(x|y) dx
+>         &= ∫_{\hat{X}_{MAD}}^{∞} p_{X|Y}(x|y) dx \\
+>     ∫_0^{\hat{X}_{MAD}} \frac{p_{X,Y}(x,y)}{p_Y(y)} dx
+>         &= ∫_{\hat{X}_{MAD}}^1 \frac{p_{X,Y}(x,y)}{p_Y(y)} dx \\
+>     ∫_0^{\hat{X}_{MAD}} 12(1 − x) y(1 − y) dx
+>         &= ∫_{\hat{X}_{MAD}}^1 12(1 − x) y(1 − y) dx \\
+>     ∫_0^{\hat{X}_{MAD}} (1 − x) dx
+>         &= ∫_{\hat{X}_{MAD}}^1 (1 − x) dx \\
+>     x - \frac{x²}{2} \Bigg|_{x=0}^{\hat{X}_{MAD}}
+>         &= x - \frac{x²}{2} \Bigg|_{x=\hat{X}_{MAD}}^1 \\
+>     \hat{X}_{MAD} - \frac{\hat{X}_{MAD}²}{2}
+>         &= \frac{1}{2} - \left(\hat{X}_{MAD} - \frac{\hat{X}_{MAD}²}{2}\right) \\
+>     - \hat{X}_{MAD}²  + 2\hat{X}_{MAD} - \frac{1}{2} &= 0 \\
+>     \hat{X}_{MAD} &\in \left\{\frac{-2 \pm \sqrt{4 - 2}}{-2}\right\} \\
+>     \hat{X}_{MAD} &\in \left\{1 \mp \frac{\sqrt{2}}{2}\right\} \\
+>     &\downarrow 0≤x≤1 \\
+>     \hat{X}_{MAD} &\boxed{= 1 - \frac{\sqrt{2}}{2} = 0.293} \\
+> \end{aligned}
+> $$
 
 ### Pregunta 1.d)
 Calcule el MSE de los estimadores obtenidos en los apartados (b) y (c). ¿Cuál
