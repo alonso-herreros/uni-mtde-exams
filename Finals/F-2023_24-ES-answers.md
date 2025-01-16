@@ -451,12 +451,23 @@ afirmación sea cierta.
 > regularización y la función que se minimiza pasa a ser la suma de los errores
 > al cuadrado.
 
-## Problema 6
+## Problema 6 •
 Responda brevemente a las siguientes preguntas:
 
-### Pregunta 6.1
+### Pregunta 6.1 •
 ¿Es el filtro de Wiener un filtro lineal? Justifique su respuesta.
 
-### Pregunta 6.2
+> **Respuesta**
+>
+> El filtro de Wiener es un filtro lineal. Su salida se calcula como una
+> combinacion lineal del vector de entrada y los coeficientes.
+
+### Pregunta 6.2 •
 ¿Qué es un filtro adaptativo? Indique un ejemplo de tipo de algoritmo que se usa
 en filtros adaptativos para encontrar los coeficientes del mismo.
+
+> **Respuesta**
+>
+> Un filtro adaptativo es aquel en el que los coeficientes no son fijos, sino
+> que se deben actualizar para en cada instante de tiempo $n$. Un ejemplo de
+> filtro adaptativo es el LMS (del inglés *Least-Mean-Square*)
