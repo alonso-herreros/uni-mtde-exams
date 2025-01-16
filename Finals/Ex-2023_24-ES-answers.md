@@ -9,7 +9,7 @@
 ### Tabla de contenidos <!-- omit in toc -->
 
 * [Problema 1](#problema-1)
-    * [Pregunta 1.a)](#pregunta-1a)
+    * [Pregunta 1.a) ✓](#pregunta-1a-)
     * [Pregunta 1.b)](#pregunta-1b)
     * [Pregunta 1.c)](#pregunta-1c)
     * [Pregunta 1.d)](#pregunta-1d)
@@ -48,9 +48,34 @@ p_{X,Y} (x, y) = \begin{cases}
 \end{cases}
 $$
 
-### Pregunta 1.a)
+### Pregunta 1.a) ✓
 Establezca las expresiones de las funciones de densidad de probabilidad
 marginales: $p_X(x)$ y $p_Y(y)$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \begin{aligned}
+>     p_X(x) &= ∫_{(Y)} p_{X,Y}(x,y) dy \\
+>     &= ∫₀¹ 12(1-x)y(1-y) dy \\
+>     &= 12(1-x) ∫₀¹ (y - y²) dy \\
+>     &= 12(1-x) \left(\frac{y²}{2} - \frac{y³}{3} \Bigg|_{y=0}^1\right) \\
+>     &= 12(1-x) \left(\frac{y²}{2} - \frac{y³}{3} \Bigg|_{y=0}^1\right) \\
+>     &= 12(1-x) \left(\frac{1}{2} - \frac{1}{3}\right) \\
+>     &\boxed{= 2(1-x) \quad 0≤x≤1}
+> \end{aligned}
+> $$
+>
+> $$
+> \begin{aligned}
+>     p_Y(y) &= ∫_{(X)} p_{X,Y}(x,y) dx \\
+>     &= ∫₀¹ 12(1-x)y(1-y) dx \\
+>     &= 12 (y-y²) ∫₀¹ (1-x) dx \\
+>     &= 12 (y-y²) \left(x - \frac{x²}{2} \Bigg|_{x=0}^1\right) \\
+>     &= 12 (y-y²) \left(1 - \frac{1}{2}\right) \\
+>     &\boxed{= 6 (y - y²) \quad 0≤y≤1}
+> \end{aligned}
+> $$
 
 ### Pregunta 1.b)
 Obtenga el estimador MMSE de $X$ dado $Y$, $\hat{X}_{MMSE}(Y)$.
