@@ -404,7 +404,7 @@ Suponga que se dispone del siguiente conjunto de datos de entramiento en el que
 se incluyen muestras de la clase positiva ($+$) y muestras de la clase negativa
 ($−$), así como una muestra de test ($△$).
 
-![alt](fig/F-2023₂4-ES-4.1.png)
+![alt](fig/F-2023_24-ES-4.1.png)
 
 Todas las muestras se proyectan en un espacio vectorial de 2 características
 ($X₁$ y $X₂$). Suponiendo que se utiliza el algoritmo de clasificación $k$-NN
