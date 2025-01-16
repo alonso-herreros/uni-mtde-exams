@@ -18,14 +18,14 @@
     * [Pregunta 2.a)](#pregunta-2a)
     * [Pregunta 2.b)](#pregunta-2b)
     * [Pregunta 2.c)](#pregunta-2c)
-* [Problema 3.](#problema-3)
+* [Problema 3](#problema-3)
     * [Pregunta 3.a)](#pregunta-3a)
     * [Pregunta 3.b)](#pregunta-3b)
-* [Problema 4.](#problema-4)
-* [Problema 5.](#problema-5)
+* [Problema 4](#problema-4)
+* [Problema 5](#problema-5)
     * [Pregunta 5.a)](#pregunta-5a)
     * [Pregunta 5.b)](#pregunta-5b)
-* [Problema 6.](#problema-6)
+* [Problema 6](#problema-6)
 
 ---
 
@@ -92,7 +92,7 @@ Determine el estimador ML de S a la vista de un conjunto $\mathcal{C} =
 ### Pregunta 2.c)
 Determine el estimador MAP de $S$ a la vista de $X$, $\hat{S}_{MAP}(X)$.
 
-## Problema 3.
+## Problema 3
 
 Considere un problema de decisión binaria con hipótesis equiprobables definido
 mediante las siguientes funciones de verosimilitud:
@@ -122,11 +122,11 @@ Determine el decisor de mínimo coste medio dada la observación.
 el decisor de coste medio mínimo, dada la observación, no incurra en falsas
 alarmas?
 
-## Problema 4.
+## Problema 4
 
 Describa brevemente en qué consiste la validación cruzada e indique para qué se puede emplear.
 
-## Problema 5.
+## Problema 5
 
 Considere el problema de clasificación definido por el conjunto de
 entrenamiento que se muestra en la tabla a continuación.
@@ -159,7 +159,7 @@ para el conjunto de test de la tabla siguiente.
 | 0,31  | -1    |
 | 1,22  | 1     |
 
-## Problema 6.
+## Problema 6
 
 Describa cómo puede resolverse un problema de predicción de valores de una
 señal utilizando un filtro lineal. Dibuje un esquema del filtro indicando
