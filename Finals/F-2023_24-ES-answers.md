@@ -23,10 +23,10 @@
 * [Problema 4 ✓](#problema-4-)
     * [Pregunta 4.a) ✓](#pregunta-4a-)
     * [Pregunta 4.b) ✓](#pregunta-4b-)
-* [Problema 5](#problema-5)
-* [Problema 6](#problema-6)
-    * [Pregunta.1](#pregunta1)
-    * [Pregunta.2](#pregunta2)
+* [Problema 5 ✓](#problema-5-)
+* [Problema 6 •](#problema-6-)
+    * [Pregunta 6.1 •](#pregunta-61-)
+    * [Pregunta 6.2 •](#pregunta-62-)
 
 ---
 
