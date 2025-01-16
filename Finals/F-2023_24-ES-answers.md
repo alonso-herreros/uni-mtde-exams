@@ -448,15 +448,15 @@ afirmación sea cierta.
 > **Respuesta** (✓)
 >
 > La afirmación es cierta. Cuando el hiperparámetro es 0, se elimina la
-> regularizacion y la función que se minimiza pasa a ser la suma de los errores
+> regularización y la función que se minimiza pasa a ser la suma de los errores
 > al cuadrado.
 
 ## Problema 6
 Responda brevemente a las siguientes preguntas:
 
-### Pregunta.1
+### Pregunta 6.1
 ¿Es el filtro de Wiener un filtro lineal? Justifique su respuesta.
 
-### Pregunta.2
+### Pregunta 6.2
 ¿Qué es un filtro adaptativo? Indique un ejemplo de tipo de algoritmo que se usa
 en filtros adaptativos para encontrar los coeficientes del mismo.
