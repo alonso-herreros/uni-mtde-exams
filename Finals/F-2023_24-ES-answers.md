@@ -398,7 +398,7 @@ $$
 > \end{aligned}
 > $$
 
-## Problema 4
+## Problema 4 ✓
 
 Suponga que se dispone del siguiente conjunto de datos de entramiento en el que
 se incluyen muestras de la clase positiva ($+$) y muestras de la clase negativa
@@ -420,9 +420,18 @@ respuesta.
 > más cercana a la muestra de test es una muestra de la clase negativa, por lo
 > que esta sería la clase asignada a la muestra de test.
 
-### Pregunta 4.b)
+### Pregunta 4.b) ✓
 Para este conjunto de datos de entrenamiento, ¿recomendaría utilizar $k = 11$?
 Razone su respuesta.
+
+> **Respuesta** (✓)
+>
+> En el conjunto de entrenamiento solo hay 6 muestras de la clase negativa, una
+> de las cuales parece un valor atípico. Para que se decida la clase negativa
+> para una muestra de test, todas las muestras negativas deben estar incluídas
+> entre los 11 vecinos más cercanos, lo cual no está equilibrado. No recomendaria
+> utilizar $k=11$ con un algoritmo uniforme. En cambio, con un algoritmo
+> ponderado, este valor sí es aceptable.
 
 ## Problema 5
 
