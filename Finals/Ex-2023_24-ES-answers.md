@@ -10,7 +10,7 @@
 
 * [Problema 1](#problema-1)
     * [Pregunta 1.a) ✓](#pregunta-1a-)
-    * [Pregunta 1.b)](#pregunta-1b)
+    * [Pregunta 1.b) ✓](#pregunta-1b-)
     * [Pregunta 1.c)](#pregunta-1c)
     * [Pregunta 1.d)](#pregunta-1d)
     * [Pregunta 1.e)](#pregunta-1e)
@@ -77,8 +77,22 @@ marginales: $p_X(x)$ y $p_Y(y)$.
 > \end{aligned}
 > $$
 
-### Pregunta 1.b)
+### Pregunta 1.b) ✓
 Obtenga el estimador MMSE de $X$ dado $Y$, $\hat{X}_{MMSE}(Y)$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \begin{aligned}
+>     \hat{X}_{MMSE}(Y) &= \mathbb{E} \{X|Y\} \\
+>     &= ∫₀¹ x p_{X|Y}(x|y) dx \\
+>     &= ∫₀¹ x \frac{p_{X,Y}(x,y)}{p_Y(y)} dx \\
+>     &= ∫₀¹ x \frac{12(1 − x) y(1 − y)}{6y(1 - y)} dx \\
+>     &= ∫₀¹ 2x (1 − x) dx \\
+>     &= x² - \frac{2x³}{3} \Bigg|_{x=0}^1 \\
+>     &\boxed{= \frac{1}{3}}
+> \end{aligned}
+> $$
 
 ### Pregunta 1.c)
 Determine el estimador MAD de $X$ dado $Y$, $\hat{X}_{MAD}(Y)$.
