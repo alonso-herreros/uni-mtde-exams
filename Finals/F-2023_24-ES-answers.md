@@ -410,9 +410,15 @@ Todas las muestras se proyectan en un espacio vectorial de 2 características
 ($X₁$ y $X₂$). Suponiendo que se utiliza el algoritmo de clasificación $k$-NN
 ponderado, responda a las siguientes preguntas:
 
-### Pregunta 4.a)
+### Pregunta 4.a) ✓
 ¿Cuál sería la clase asignada para la muestra de test si $k = 1$? Razone su
 respuesta.
+
+> **Respuesta** (✓)
+>
+> Visualmente podemos determinar que la muestra del conjunto de entrenamiento
+> más cercana a la muestra de test es una muestra de la clase negativa, por lo
+> que esta sería la clase asignada a la muestra de test.
 
 ### Pregunta 4.b)
 Para este conjunto de datos de entrenamiento, ¿recomendaría utilizar $k = 11$?
