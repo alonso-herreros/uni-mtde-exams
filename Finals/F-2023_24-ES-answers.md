@@ -316,8 +316,54 @@ ambas verosimilitudes.
 > \boxed{p_{X|H}(x|1) = G(1,1)}
 > $$
 
-### Pregunta 3.b)
+### Pregunta 3.b) ✓
 Obtenga el clasificador ML basado en $X$.
+
+> **Respuesta** (✓)
+>
+> $$
+> \def\decgl#1#2{\enspace\overset{#1}{\underset{#2}{\gtrless}}\enspace}
+>
+> \begin{aligned}
+>     p_{X|H}(x|1) &\decgl{D₁}{D₀} p_{X|H}(x|0) \\
+>     G(1,1) &\decgl{D₁}{D₀} G(0,2) \\
+>     \frac{1}{\sqrt{2π⋅1}} \exp\left(-\frac{(x-1)²}{2⋅1}\right)
+>         &\decgl{D₁}{D₀} \frac{1}{\sqrt{2π⋅2}} \exp\left(-\frac{x²}{2⋅2}\right) \\
+>     \exp\left(-\frac{(x-1)²}{2} + \frac{x²}{4}\right)
+>         &\decgl{D₁}{D₀} \frac{1}{\sqrt{2}} \\
+>     \exp\left(\frac{2(x²-2x+1) - x²}{4}\right) &\decgl{D₀}{D₁} \sqrt{2} \\
+>     x² - 4x + 2 &\decgl{D₀}{D₁} 4 \ln\sqrt{2} \\
+>     x² - 4x + 2 - 4\ln\sqrt{2} &\decgl{D₀}{D₁} 0 \\
+> \end{aligned}
+> $$
+>
+> Podemos encontrar las fronteras de decisión resolviendo la ecuación de segundo
+> grado:
+>
+> $$
+> \begin{aligned}
+>     x² - 4x + 2 - 4\ln\sqrt{2} &= 0 \\
+>     x &= \frac{-4 \pm \sqrt{16 - 4(2 - 4\ln\sqrt{2})}}{2} \\
+>     x &\in \{x_{b1}, x_{b2}\}, \text{ where } \begin{cases}
+>             x_{b1} = 0.160 \\
+>             x_{b2} = 3.840 \\
+>         \end{cases}
+> \end{aligned}
+> $$
+>
+> Observando el valor en $x=0$ podemos deducir a qué decision corresponde cada
+> región:
+>
+> $$
+> 2 - 4\ln\sqrt{2} = 0.63 > 0 \text{, so } x = 0 ⟹ D=0
+> $$
+>
+> $$
+> \boxed{ϕ_{ML} = \begin{cases}
+>     D=0 & \text{ if } x < 0.160 \text{ or } 3.840 < x \\
+>     D=1 & \text{ if } 0.160 < x < 3.840
+> \end{cases}}
+> $$
 
 ### Pregunta 3.c)
 Calcule la probabilidad de falsa alarma del clasificador ML. Exprese esta
